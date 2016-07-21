@@ -22,8 +22,7 @@ import os
 import unittest
 
 from hamcrest import *
-import config
-from mcheck.header_parser.sam.header_analyser import BAMHeaderAnalyser, _RGTagAnalyser
+from sam.header_analyser import BAMHeaderAnalyser, _RGTagAnalyser
 
 @unittest.skip
 class Test_RGTagAnalyser(unittest.TestCase):
@@ -37,7 +36,7 @@ class Test_RGTagAnalyser(unittest.TestCase):
 
         header_rg = {"ID" : "1#71.4", "PL" : "ILLUMINA", "PU" : "120910_HS11_08408_B_C0PNFACXX_7#71", "LB" : "5507617"}
         platf = _RGTagAnalyser._extract_platform_list_from_rg(header_rg)
-        assert_that(platf, equal_to("ILLUMINA HS"))
+        self.assertEqual(platf, "ILLUMINA HS")
 
 
     def test_extract_run_from_PUHeader(self):

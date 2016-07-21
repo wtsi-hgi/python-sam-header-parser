@@ -19,7 +19,7 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 This file has been created on Apr 07, 2016.
 """
 import unittest
-from mcheck.header_parser.sam.header import SAMFileHeader, SAMFileRGTag
+from sam.header import SAMFileHeader, SAMFileRGTag
 
 
 class TestSAMFileHeader(unittest.TestCase):

@@ -20,8 +20,8 @@ This file has been created on Apr 07, 2016.
 """
 
 import unittest
-from mcheck.header_parser.sam.header_parser import SAMFileRGTagParser, SAMFileHeaderParser
-from mcheck.header_parser.sam.header import SAMFileHeader, SAMFileRGTag
+from sam.header_parser import SAMFileRGTagParser, SAMFileHeaderParser
+from sam.header import SAMFileHeader, SAMFileRGTag
 
 class TestSAMFileHeaderParser(unittest.TestCase):
 
