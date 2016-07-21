@@ -4,7 +4,7 @@
 # python-sam-header-parser
 
 This project is useful for parsing a SAM/BAM/CRAM header in order to extract only the useful information from it.
-It runs with python >= 3.5.
+It runs with python >= 3.5 and it need samtools > 1.3 in the PATH.
 
 Example of usage:
 - For data in iRODS:
