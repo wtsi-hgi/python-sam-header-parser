@@ -18,6 +18,9 @@ pip3 install git+https://github.com/wtsi-hgi/python-sam-header-parser.git@<commi
 - For data in iRODS:
 
 ```python
+    from sam.header_extractor import IrodsSamFileHeaderExtractor, LustreSamFileHeaderExtractor
+    from sam.header_parser import SAMFileHeaderParser, SAMFileRGTagParser
+
     header_as_text = IrodsSamFileHeaderExtractor.extract(fpath)
     raw_header = SAMFileHeaderParser.parse(header_as_text)
     rg_tags_parsed = SAMFileRGTagParser.parse(raw_header.rg_tags)
